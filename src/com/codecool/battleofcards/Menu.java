@@ -4,15 +4,15 @@ import java.util.Scanner;
 
 public class Menu {
 
-    private final Scanner scanner = new Scanner(System.in);
-    public UI print = new UI();
+
+    public UI ui = new UI();
     public Game game = new Game();
 
     public void startMenu() {
         boolean isRunning = true;
         while (isRunning) {
-            this.print.printMainMenu();
-            int option = scanner.nextInt();
+            this.ui.printMainMenu();
+            int option = ui.scanner.nextInt();
 
             switch (option) {
                 case 1: {
