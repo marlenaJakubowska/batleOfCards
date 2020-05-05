@@ -35,8 +35,24 @@ public class XMLReader {
             if (nodeGame.getNodeType() == Node.ELEMENT_NODE) {
                 Element game = (Element) nodeGame;
                 System.out.println("Name: " + game.getAttribute("name"));
-            }
 
+                NodeList attributeTagList = game.getChildNodes();
+                for (int attributeTagIndex = 0; attributeTagIndex<attributeTagList.getLength(); attributeTagIndex++){
+                    Node attributeTagNode = attributeTagList.item(attributeTagIndex);
+                    if(attributeTagNode.getNodeType()==Node.ELEMENT_NODE){
+                        Element attributeTag = (Element) attributeTagNode;
+                        NodeList dataList = attributeTag.getChildNodes();
+                        for (int dataIndex = 0; dataIndex<dataList.getLength(); dataIndex++){
+                            Node nodeData = dataList.item(dataIndex);
+                            if (nodeData.getNodeType()==Node.ELEMENT_NODE){
+                                Element data = (Element) nodeData;
+                                System.out.println(data.getAttribute("type") + ": " + data.getTextContent());
+                            }
+                        }
+                    }
+                }
+                System.out.println("-----------------------");
+            }
         }
     }
 }
