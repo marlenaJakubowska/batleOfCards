@@ -1,6 +1,9 @@
 package com.codecool.battleofcards;
 
+import java.util.Scanner;
+
 public class UI {
+    public final Scanner scanner = new Scanner(System.in);
 
     public void printMainMenu() {
         System.out.println("Welcome to Battle of Cards Game. Please choose an option:");
