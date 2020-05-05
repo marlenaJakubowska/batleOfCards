@@ -8,7 +8,6 @@ public class Game {
 //        scanner howmany = new Scanner(System.in);
 //        boolean gameOn = true;
 //        while (gameOn == true){
-            
 //        }
     }
 }

@@ -6,7 +6,7 @@ public class HumanPlayer extends Player{
         super(name);
     }
 
-    public String chooseCardAtributeToCompare(){
+    public String chooseCardAttributeToCompare(){
         return "string";
     }
 }
