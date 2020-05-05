@@ -1,5 +1,7 @@
 package com.codecool.battleofcards;
 
+import java.util.List;
+
 public class Dealer {
 
     public Dealer(){
@@ -10,7 +12,7 @@ public class Dealer {
 
     }
 
-    public void compareCards(List<Cards> currentCards){
+    public void compareCards(List<Card> currentCards){
         
     }
 }
