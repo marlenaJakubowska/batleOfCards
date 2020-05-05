@@ -3,9 +3,9 @@ package com.codecool.battleofcards;
 public class Table {
 
     private List<Card> listOfCards;
-    private List<CurrentCards> currentCards;
+    private List<Cards> currentCards;
     
-    public List<tableCards> tableListOfCards(){
+    public List<Card> tableListOfCards(){
         return listOfCards;
     }
 
