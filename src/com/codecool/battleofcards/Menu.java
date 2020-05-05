@@ -12,7 +12,7 @@ public class Menu {
         boolean isRunning = true;
         while (isRunning) {
             this.ui.printMainMenu();
-            int option = ui.scanner.nextInt();
+            int option = ui.takeIntegerInput("Choose option: ");
 
             switch (option) {
                 case 1: {
