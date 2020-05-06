@@ -1,5 +1,7 @@
 package com.codecool.battleofcards;
 
+import java.util.Arrays;
+
 public class Game {
     public UI ui = new UI();
 
@@ -21,6 +23,13 @@ public class Game {
         //     System.out.println(card.getCardStats());
         //     System.out.println("-----------------------------------");
         // }
+        Table table = new Table();
+
 
     }
+
+
 }
+
+
+

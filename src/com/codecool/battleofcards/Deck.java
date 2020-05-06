@@ -1,6 +1,7 @@
 package com.codecool.battleofcards;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class Deck {
@@ -18,4 +19,5 @@ public class Deck {
     public List<Card> getCards() {
         return cards;
     }
+
 }
