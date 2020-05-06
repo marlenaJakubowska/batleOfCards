@@ -1,19 +1,35 @@
 package com.codecool.battleofcards;
 
+import java.util.Arrays;
+
 public class Game {
 
     public void init() {
-        //System.out.println("hello");
-        XMLReader documentReader = new XMLReader();
-        documentReader.readXMLDocument("cards.xml");
-        Deck deck = new Deck();
-        documentReader.createCardsInDeckFromXMLData(deck);
-
-        for (Card card : deck.getCards()){
+        CardReader cardReader = new CardReader();
+        System.out.println("List of cards:");
+        cardReader.readCards();
+        Deck deck = cardReader.getDeck();
+        for (Card card : deck.getCards()) {
             System.out.println(card.getCardName());
             System.out.println(card.getCardStats());
-            System.out.println("-----------------------------------");
+            System.out.println("value by criticScore: " + card.getValueByType("criticScore"));
+            System.out.println("__________________________-");
         }
 
+
+
+
+
+//        XMLReader documentReader = new XMLReader();
+//        documentReader.readXMLDocument("cards.xml");
+//        Deck deck = new Deck();
+//        documentReader.createCardsInDeckFromXMLData(deck);
+//
+//        for (Card card : deck.getCards()){
+//            System.out.println(card.getCardName());
+//            System.out.println(card.getCardStats());
+//            System.out.println("-----------------------------------");
+//        }
+//
     }
 }
