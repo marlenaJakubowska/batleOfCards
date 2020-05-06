@@ -3,7 +3,7 @@
     <Game name ="GTA 5">
         <Attributes>
             <Attr type="criticScore">96</Attr>
-            <Attr type="userScore">7,8</Attr>
+            <Attr type="userScore">7.8</Attr>
             <Attr type="ourScore">7</Attr>
             <Attr type="publicationYear">2015</Attr>
         </Attributes>
@@ -12,7 +12,7 @@
     <Game name ="GTA SA">
         <Attributes>
             <Attr type="criticScore">93</Attr>
-            <Attr type="userScore">8,9</Attr>
+            <Attr type="userScore">8.9</Attr>
             <Attr type="ourScore">8</Attr>
             <Attr type="publicationYear">2005</Attr>
         </Attributes>
@@ -21,8 +21,8 @@
     <Game name ="Overwatch">
         <Attributes>
             <Attr type="criticScore">91</Attr>
-            <Attr type="userScore">6,5</Attr>
-            <Attr type="ourScore">9,5</Attr>
+            <Attr type="userScore">6.5</Attr>
+            <Attr type="ourScore">9.5</Attr>
             <Attr type="publicationYear">2016</Attr>
         </Attributes>
     </Game>
@@ -30,7 +30,7 @@
     <Game name ="God of War">
         <Attributes>
             <Attr type="criticScore">94</Attr>
-            <Attr type="userScore">8,9</Attr>
+            <Attr type="userScore">8.9</Attr>
             <Attr type="ourScore">6</Attr>
             <Attr type="publicationYear">2005</Attr>
         </Attributes>
@@ -39,7 +39,7 @@
     <Game name ="Minecraft">
         <Attributes>
             <Attr type="criticScore">93</Attr>
-            <Attr type="userScore">7,7</Attr>
+            <Attr type="userScore">7.7</Attr>
             <Attr type="ourScore">9</Attr>
             <Attr type="publicationYear">2011</Attr>
         </Attributes>
@@ -48,7 +48,7 @@
     <Game name ="Fortnite">
         <Attributes>
             <Attr type="criticScore">81</Attr>
-            <Attr type="userScore">2,9</Attr>
+            <Attr type="userScore">2.9</Attr>
             <Attr type="ourScore">4</Attr>
             <Attr type="publicationYear">2017</Attr>
         </Attributes>
@@ -57,7 +57,7 @@
     <Game name ="Sims 2">
         <Attributes>
             <Attr type="criticScore">90</Attr>
-            <Attr type="userScore">8,8</Attr>
+            <Attr type="userScore">8.8</Attr>
             <Attr type="ourScore">6</Attr>
             <Attr type="publicationYear">2004</Attr>
         </Attributes>
@@ -66,7 +66,7 @@
     <Game name ="Witcher 3">
         <Attributes>
             <Attr type="criticScore">93</Attr>
-            <Attr type="userScore">9,4</Attr>
+            <Attr type="userScore">9.4</Attr>
             <Attr type="ourScore">8</Attr>
             <Attr type="publicationYear">2015</Attr>
         </Attributes>
