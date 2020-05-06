@@ -2,7 +2,7 @@ package com.codecool.battleofcards;
 
 import java.util.List;
 
-public class Player {
+public abstract class Player {
     private String name;
     protected List<Card> listOfCards;
     protected Card topcard;
