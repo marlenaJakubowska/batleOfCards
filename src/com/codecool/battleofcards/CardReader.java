@@ -44,8 +44,8 @@ public class CardReader {
             Element element = (Element) node;
             String name = element.getAttribute("name");
             Card card = new Card(name);
-            addCardStatsToCard(card, element);
             this.deck.addCard(card);
+            addCardStatsToCard(card, element);
 
         }
     }
