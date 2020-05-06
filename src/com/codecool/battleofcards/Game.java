@@ -21,16 +21,4 @@ public class Game {
 }
 
 
-//        XMLReader documentReader = new XMLReader();
-//        documentReader.readXMLDocument("cards.xml");
-//        Deck deck = new Deck();
-//        documentReader.createCardsInDeckFromXMLData(deck);
-//
-//        for (Card card : deck.getCards()){
-//            System.out.println(card.getCardName());
-//            System.out.println(card.getCardStats());
-//            System.out.println("-----------------------------------");
-//        }
-//
-
 

@@ -8,12 +8,11 @@ import org.w3c.dom.NodeList;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import java.io.File;
-import java.util.Collections;
 
 public class CardReader {
 
     private Document document;
-    private Deck deck;
+    private final Deck deck;
 
     public CardReader() {
         this.deck = new Deck();
