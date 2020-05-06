@@ -10,6 +10,7 @@ import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 import java.io.IOException;
+import java.util.HashMap;
 
 public class XMLReader {
     Document document;
@@ -27,14 +28,14 @@ public class XMLReader {
             }
         }
     }
-    public void createCardFromXMLData() {
+    public void createCardsInDeckFromXMLData(Deck deck) {
         NodeList gameList = document.getElementsByTagName("Game");
 
         for (int gameIndex = 0; gameIndex < gameList.getLength(); gameIndex++) {
             Node nodeGame = gameList.item(gameIndex);
             if (nodeGame.getNodeType() == Node.ELEMENT_NODE) {
                 Element game = (Element) nodeGame;
-                System.out.println("Name: " + game.getAttribute("name"));
+                String gameName = game.getAttribute("name");
 
                 NodeList attributeTagList = game.getChildNodes();
                 for (int attributeTagIndex = 0; attributeTagIndex<attributeTagList.getLength(); attributeTagIndex++){
@@ -42,16 +43,19 @@ public class XMLReader {
                     if(attributeTagNode.getNodeType()==Node.ELEMENT_NODE){
                         Element attributeTag = (Element) attributeTagNode;
                         NodeList dataList = attributeTag.getChildNodes();
+
+                        HashMap<String, Float> cardStats = new HashMap<>();
                         for (int dataIndex = 0; dataIndex<dataList.getLength(); dataIndex++){
                             Node nodeData = dataList.item(dataIndex);
                             if (nodeData.getNodeType()==Node.ELEMENT_NODE){
                                 Element data = (Element) nodeData;
-                                System.out.println(data.getAttribute("type") + ": " + data.getTextContent());
+                                cardStats.put(data.getAttribute("type"), Float.parseFloat(data.getTextContent()));
                             }
                         }
+                        Card card = new Card(gameName, cardStats);
+                        deck.addCard(card);
                     }
                 }
-                System.out.println("-----------------------");
             }
         }
     }
