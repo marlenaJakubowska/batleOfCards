@@ -35,7 +35,7 @@ public class Menu {
                 break;
             }
                 case 2: {
-                    System.out.println("About - Work in progress");
+                    this.ui.printAbout();
                     break;
                 }
                 case 0: {

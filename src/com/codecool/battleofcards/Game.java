@@ -2,7 +2,6 @@ package com.codecool.battleofcards;
 
 public class Game {
     public UI ui = new UI();
-    public Player player = new Player("player");
 
     public void init() {
         this.ui.printSelectNumberOfPlayers();
