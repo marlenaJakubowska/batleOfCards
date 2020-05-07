@@ -11,17 +11,19 @@ public class Table {
     private List<Card> listOfCards;
     private List<Card> currentCards;
     
-    public List<Card> tableListOfCards(){
+    public List<Card> getTableListOfCards(){
         return listOfCards;
     }
 
-    public List<Card> tableCurrentCards(){
+    public List<Card> getTableCurrentCards(){
         return currentCards;
     }
 
     public Table(){
         CardReader cardReader = new CardReader();
         Deck deck = cardReader.getDeck();
+        shuffleCards(deck);
+
         printPlayerCards(deck);
 
     }
@@ -30,10 +32,13 @@ public class Table {
         Collections.shuffle(deck.getCards());
     }
 
-    public void printPlayerCards(Deck deck) {
-        String[] headers = {"Opponent card", "Your card"};
-        String[][] content = {{deck.getCards().get(0).toString(), deck.getCards().get(1).toString()}};
-        System.out.println(FlipTable.of(headers, content));
+    public void printPlayerCards() {
+        String[] innerHeaders = {"gamename"};
+        String[][] innerData = { { "attributes"} };
+        String inner = FlipTable.of(innerHeaders, innerData);
+        String[] headers = {"Player1", "Player2"};
+        String[][] data = { { inner, inner } };
+        System.out.println(FlipTable.of(headers, data));
     }
 
 
