@@ -7,8 +7,14 @@ import java.util.Random;
 
 public class AI extends Player{
 
+    private String name = "AI";
+
     public AI(String name) {
         super(name);
+    }
+
+    public AI() {
+        this.name = createName();
     }
 
     @Override
@@ -47,4 +53,20 @@ public class AI extends Player{
         }
         return biggestAttribute;
     }
-}
+
+    private String createName() {
+        String[] alphabet = {"q", "w", "e", "r", "t", "y", "u", "i", "o", "p", "a", "s", "d"
+                , "f", "g", "h", "j", "k", "l", "z", "x", "c", "v", "b", "n", "m"};
+        String name = "";
+
+        Random random = new Random();
+        for (int i = 0; i < 5; i++) {
+            this.name += alphabet[random.nextInt(alphabet.length)];
+        }
+        return this.name;
+    }
+
+    public String getName() {
+        return this.name;
+    }
+    }

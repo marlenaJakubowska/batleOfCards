@@ -11,4 +11,9 @@ public class Dealer extends Player{
     public void compareCards(List<Card> currentCards){
         
     }
+
+    @Override
+    public String chooseStatToCompare() {
+        return null;
+    }
 }
