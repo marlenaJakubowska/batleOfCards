@@ -5,7 +5,7 @@ import java.util.List;
 public abstract class Player {
 
     protected List<Card> listOfCards;
-    protected Card topcard;
+    protected Card topCard;
 
     protected String name;
     private Hand hand;
@@ -29,6 +29,10 @@ public abstract class Player {
 
     public Hand getHand() {
         return this.hand;
+    }
+
+    public Card getTopCard() {
+        return hand.getHandCards().get(0);
     }
 
 //    public List<Card> getListOfCards(){

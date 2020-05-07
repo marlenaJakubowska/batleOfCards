@@ -53,4 +53,21 @@ public class Table2 {
             }
         }
     }
+
+    private int compareTopCards(String attributeChoice, Player currentPlayer, Player rivalPlayer) {
+        Float currentPlayerAttrValue = currentPlayer.getTopCard().getValueByType(attributeChoice);
+        Float rivalPlayerAttrValue = rivalPlayer.getTopCard().getValueByType(attributeChoice);
+        int compare= currentPlayerAttrValue.compareTo(rivalPlayerAttrValue);
+        return compare;
+
+    }
+    private void printCompareResult(int compareResult, Player currentPlayer, Player rivalPlayer) {
+        if(compareResult == 0) {
+            System.out.println("Tie. Play on");
+        } else if(compareResult == 1) {
+            System.out.println(currentPlayer.name + "wins the round");
+        } else {
+            System.out.println("No luck this time. " + rivalPlayer.name + " wins this time");
+        }
+    }
 }

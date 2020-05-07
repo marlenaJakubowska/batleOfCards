@@ -25,7 +25,7 @@ public class AI extends Player{
     public String chooseRandomAttribute(){
         List<String> attributeNames = new ArrayList<>();
 
-        Map<String, Float> attributesMap = topcard.getCardStats();
+        Map<String, Float> attributesMap = topCard.getCardStats();
         for(String key : attributesMap.keySet()){
             attributeNames.add(key);
         }
@@ -37,7 +37,7 @@ public class AI extends Player{
     }
 
     public String chooseBiggestAttribute(){
-        Map<String, Float> attributesMap = topcard.getCardStats();
+        Map<String, Float> attributesMap = topCard.getCardStats();
         String biggestAttribute = "";
 
         float biggestAttributeValue = 0;
