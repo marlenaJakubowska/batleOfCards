@@ -15,6 +15,12 @@ public class UI {
         return scanner.nextInt();
     }
 
+    public void clearScreen(){
+        System.out.print("\033[H\033[2J");
+        System.out.flush();
+
+    }
+
     public void printMainMenu() {
         System.out.println("Welcome to Battle of Cards Game. Please choose an option:\n"
                          + "1. New Game\n"

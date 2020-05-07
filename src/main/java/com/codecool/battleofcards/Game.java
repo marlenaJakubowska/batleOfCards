@@ -10,7 +10,9 @@ public class Game {
         int numOfPlayers = ui.takeIntegerInput("Number of rivals: ");
         for (int i = 0; i < numOfPlayers; i++){
             System.out.println("Player: " + 1 + i);
+
         }
+
         
         //System.out.println("hello");
         // XMLReader documentReader = new XMLReader();
