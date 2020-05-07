@@ -43,6 +43,7 @@ public class Table2 {
     }
 
     public void giveCards() {
+        shuffleCards(deck);
         int numberOfCards = deck.getCards().size();
         for(int i = 0; i < numberOfCards; i++) {
             if (i % 2 == 0) {
