@@ -23,7 +23,7 @@ public class Card {
     public String attributesToString(){
         StringBuilder card = new StringBuilder();
         for (String key : cardStats.keySet()){
-            card.append(key + ": " + cardStats.get(key) + "\n");
+            card.append(key).append(": ").append(cardStats.get(key)).append("\n");
         }
         return card.toString();
     }
