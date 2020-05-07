@@ -21,12 +21,16 @@ public class Table {
 
     public Table(){
         CardReader cardReader = new CardReader();
+        this.currentCards = new ArrayList<>();
         Deck deck = cardReader.getDeck();
         shuffleCards(deck);
 
-        printCard(deck.getCards().get(0));
-        printCard(deck.getCards().get(1));
-        printCard(deck.getCards().get(2));
+        currentCards.add(deck.getCards().get(0));
+        currentCards.add(deck.getCards().get(1));
+        currentCards.add(deck.getCards().get(2));
+        currentCards.add(deck.getCards().get(3));
+
+        printFourCards(currentCards);
 
     }
 
@@ -37,7 +41,24 @@ public class Table {
     public void printCard(Card card) {
         String[] headers = {card.getCardName()};
         String[][] data = {{card.attributesToString()}};
-        System.out.print(FlipTable.of(headers, data));
+        System.out.println(FlipTable.of(headers, data));
+    }
+
+    public void printFourCards(List<Card> listOfCards){
+        for (int cardIndex = 0; cardIndex <= 4; cardIndex++){
+
+        }
+        String[] headers = {listOfCards.get(0).getCardName(),
+                            listOfCards.get(1).getCardName(),
+                            listOfCards.get(2).getCardName(),
+                            listOfCards.get(3).getCardName()};
+
+        String[][] data = {{listOfCards.get(0).attributesToString(),
+                            listOfCards.get(1).attributesToString(),
+                            listOfCards.get(2).attributesToString(),
+                            listOfCards.get(3).attributesToString()}};
+
+        System.out.println(FlipTable.of(headers, data));
     }
 
 
