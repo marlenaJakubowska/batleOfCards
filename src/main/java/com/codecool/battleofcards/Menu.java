@@ -4,7 +4,6 @@ import java.util.Scanner;
 
 public class Menu {
 
-
     public UI ui = new UI();
     public Game game = new Game();
 
