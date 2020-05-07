@@ -20,10 +20,8 @@ public class Card {
 
     public void setCardStatByType(String type, float value) {this.cardStats.put(type, value);}
 
-    public String toString(){
+    public String attributesToString(){
         StringBuilder card = new StringBuilder();
-        card.append(cardName + "\n");
-        card.append("~".repeat(cardName.length()) + "\n");
         for (String key : cardStats.keySet()){
             card.append(key + ": " + cardStats.get(key) + "\n");
         }
