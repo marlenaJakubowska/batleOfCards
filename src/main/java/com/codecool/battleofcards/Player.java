@@ -25,6 +25,8 @@ public abstract class Player {
         return name = name;
     }
 
+    public abstract String chooseStatToCompare();
+
 //    public List<Card> getListOfCards(){
 //        return listOfCards;
 //    }

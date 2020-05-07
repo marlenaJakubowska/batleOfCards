@@ -11,6 +11,11 @@ public class AI extends Player{
         super(name);
     }
 
+    @Override
+    public String chooseStatToCompare() {
+        return chooseRandomAttribute();
+    }
+
     public String chooseRandomAttribute(){
         List<String> attributeNames = new ArrayList<>();
 
