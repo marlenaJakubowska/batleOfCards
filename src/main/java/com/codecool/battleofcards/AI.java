@@ -69,4 +69,5 @@ public class AI extends Player{
     public String getName() {
         return this.name;
     }
+
     }

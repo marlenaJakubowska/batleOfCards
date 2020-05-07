@@ -7,19 +7,25 @@ import java.util.List;
 public class Table2 {
 
     private Deck deck;
-    private List<HumanPlayer> humanPlayerList;
+    private List<Player> playerList;
     private List<AI> aiList;
     private UI ui;
+    private List<Card> tableCards;
+    private int numberOfPlayers;
 
     public Table2(CardReader cardReader) {
         createUI();
-        assignObjectsToTable(cardReader);
+        createTableStuff(cardReader);
 
     }
 
-    public void assignObjectsToTable(CardReader cardReader) {
+    public void createTableStuff(CardReader cardReader) {
         this.deck = cardReader.getDeck();
-        this.humanPlayerList = new ArrayList<>();
+        this.playerList = new ArrayList<>();
+        this.tableCards = new ArrayList<>();
+        createAIPlayer();
+        createHumanPlayer();
+        numberOfPlayers = playerList.size();
 
     }
 
@@ -28,10 +34,22 @@ public class Table2 {
     }
 
     public void createHumanPlayer() {
-        humanPlayerList.add(new HumanPlayer());
+        playerList.add(new HumanPlayer());
     }
+    public void createAIPlayer() { playerList.add(new AI());}
 
     public void shuffleCards(Deck deck) {
         Collections.shuffle(deck.getCards());
+    }
+
+    public void giveCards() {
+        int numberOfCards = deck.getCards().size();
+        for(int i = 0; i < numberOfCards; i++) {
+            if (i % 2 == 0) {
+                playerList.get(0).getHand().addCard(deck.getCards().get(i));
+            } else {
+                playerList.get(1).getHand().addCard(deck.getCards().get(i));
+            }
+        }
     }
 }

@@ -27,6 +27,10 @@ public abstract class Player {
 
     public abstract String chooseStatToCompare();
 
+    public Hand getHand() {
+        return this.hand;
+    }
+
 //    public List<Card> getListOfCards(){
 //        return listOfCards;
 //    }
