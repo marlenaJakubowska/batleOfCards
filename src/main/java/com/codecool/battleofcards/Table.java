@@ -45,9 +45,7 @@ public class Table {
     }
 
     public void printFourCards(List<Card> listOfCards){
-        for (int cardIndex = 0; cardIndex <= 4; cardIndex++){
 
-        }
         String[] headers = {listOfCards.get(0).getCardName(),
                             listOfCards.get(1).getCardName(),
                             listOfCards.get(2).getCardName(),
