@@ -9,17 +9,8 @@ public class HumanPlayer extends Player{
 
     private UI ui = new UI();
 
-    public HumanPlayer(String name) {
-        super(name);
-    }
-
-    public HumanPlayer() {
-        this.name = createName();
-    }
-
-    public String chooseCardAttributeToCompare(){
-        String statToCompare;
-        return statToCompare = ui.takeStringInput("choose attribute");
+        public HumanPlayer() {
+            this.name = createName();
     }
 
     private String createName(){
@@ -35,7 +26,7 @@ public class HumanPlayer extends Player{
         int input = 0;
         while(isRunning) {
             printStatsToChoose(attributeChoice);
-            input = ui.takeIntegerInput("1 - 4");
+            input = ui.takeIntegerInput("Choose attribute 1 - 4");
             if (input > 0 && input < 5) {
                 isRunning = false;
             }

@@ -9,17 +9,9 @@ public class Hand {
     private List<Card> handCards;
     private Iterator<Card> cardIterator;
 
-
     public Hand() {
         this.handCards = new ArrayList<>();
-    }
-
-    public void addCard(Card card) {
-        this.handCards.add(card);
-    }
-
-    public List<Card> getHandCards() {
-        return handCards;
+        this.cardIterator = new CardIterator();
     }
 
     private class CardIterator implements Iterator<Card> {
@@ -38,6 +30,14 @@ public class Hand {
                 return null;
             }
         }
+    }
+
+    public void addCard(Card card) {
+        this.handCards.add(card);
+    }
+
+    public List<Card> getHandCards() {
+        return handCards;
     }
 
     public Iterator<Card> getIterator() {

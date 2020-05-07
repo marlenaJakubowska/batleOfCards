@@ -1,7 +1,5 @@
 package com.codecool.battleofcards;
 
-import java.util.Scanner;
-
 public class Menu {
 
     public UI ui = new UI();
@@ -18,18 +16,16 @@ public class Menu {
                     this.ui.printSelectionMenu();
                     int selectedOption = ui.takeIntegerInput("Choose option: ");
                 switch (selectedOption) {
-                    case 1:                                 //Player vs Player
-                    game.init();
-                    isRunning = false;
-                    break;
-                    case 2 :                                //Player vs AI
-                    game.init();
-                    isRunning = false;
-                    break;
+                    case 1:
+                        game.init();
+                        isRunning = false;
+                        break;
+                    case 2:
+                        System.out.println("Work in progress. Press 1");
+                        break;
                     case 3 :
-                    System.out.println("WIP");              //Maybe AI vs AI
-                    isRunning = false;
-                    break;
+                        System.out.println("Work in progress. Press 1");
+                        break;
                 }
                 break;
             }

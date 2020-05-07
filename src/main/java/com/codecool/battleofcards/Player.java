@@ -3,15 +3,10 @@ package com.codecool.battleofcards;
 import java.util.List;
 
 public abstract class Player {
-
     protected List<Card> listOfCards;
     protected Card topCard;
-
     protected String name;
     private Hand hand;
-    public Player(String name){
-
-    }
 
     public Player() {
         this.hand = new Hand();
@@ -25,8 +20,6 @@ public abstract class Player {
         return name = name;
     }
 
-    public abstract String chooseStatToCompare();
-
     public Hand getHand() {
         return this.hand;
     }
@@ -35,11 +28,16 @@ public abstract class Player {
         return hand.getHandCards().get(0);
     }
 
-//    public List<Card> getListOfCards(){
-//        return listOfCards;
-//    }
+    public void removeTopCard() {
+        hand.getHandCards().remove(0);
+    }
 
-//    public Card getTopcard(){
-//        return topcard;
-//    }
+    public void addRoundCardsToHand(List<Card> roundCards) {
+        for (Card card : roundCards) {
+            hand.addCard(card);
+        }
+    }
+
+    public abstract String chooseStatToCompare();
+
 }
