@@ -24,7 +24,9 @@ public class Table {
         Deck deck = cardReader.getDeck();
         shuffleCards(deck);
 
-        printPlayerCards(deck);
+        printCard(deck.getCards().get(0));
+        printCard(deck.getCards().get(1));
+        printCard(deck.getCards().get(2));
 
     }
 
@@ -32,13 +34,10 @@ public class Table {
         Collections.shuffle(deck.getCards());
     }
 
-    public void printPlayerCards() {
-        String[] innerHeaders = {"gamename"};
-        String[][] innerData = { { "attributes"} };
-        String inner = FlipTable.of(innerHeaders, innerData);
-        String[] headers = {"Player1", "Player2"};
-        String[][] data = { { inner, inner } };
-        System.out.println(FlipTable.of(headers, data));
+    public void printCard(Card card) {
+        String[] headers = {card.getCardName()};
+        String[][] data = {{card.attributesToString()}};
+        System.out.print(FlipTable.of(headers, data));
     }
 
 
