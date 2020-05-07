@@ -24,6 +24,7 @@ public class NewTable {
     public void createTableStuff(CardReader cardReader) {
 
         this.deck = cardReader.getDeck();
+        shuffleCards(deck);
 
         this.playerList = new ArrayList<>();
         this.cardsFromTie = new ArrayList<>();
