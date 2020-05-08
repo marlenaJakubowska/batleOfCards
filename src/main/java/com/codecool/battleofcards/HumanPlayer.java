@@ -1,8 +1,5 @@
 package com.codecool.battleofcards;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 public class HumanPlayer extends Player{
@@ -32,18 +29,5 @@ public class HumanPlayer extends Player{
             }
         }
         return attributeChoice.get(input);
-    }
-
-    private Map<Integer, String> statChoiceMap() {
-        Map<Integer, String> attributeChoice = new HashMap<>();
-        attributeChoice.put(1, "ourScore" );
-        attributeChoice.put(2, "criticScore");
-        attributeChoice.put(3, "publicationYear");
-        attributeChoice.put(4, "userScore");
-        return attributeChoice;
-    }
-    private void printStatsToChoose(Map<Integer, String> attributeChoice) {
-        System.out.println("Choose attribute to compare: ");
-        attributeChoice.forEach((k,v) -> System.out.println(k+" " +v));
     }
 }

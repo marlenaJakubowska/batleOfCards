@@ -1,7 +1,5 @@
 package com.codecool.battleofcards;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Map;
 import java.util.Random;
 
@@ -9,11 +7,6 @@ public class AI extends Player {
 
     public AI() {
         this.name = createName();
-    }
-
-    @Override
-    public String chooseStatToCompare() {
-        return "ourScore";
     }
 
     private String createName() {
@@ -27,23 +20,16 @@ public class AI extends Player {
         return this.name = chosen;
     }
 
-
-//TO BE USED IN THE FUTURE
-//    public String chooseRandomAttribute() {
-//        List<String> attributeNames = new ArrayList<>();
+    @Override
+    public String chooseStatToCompare() {
+        int min = 1;
+        Map<Integer, String> attributeChoice = statChoiceMap();
+        Random random = new Random();
+        int randomIndex =  min + random.nextInt(attributeChoice.size());
+        return attributeChoice.get(randomIndex);
+    }
 //
-//        Map<String, Float> attributesMap = topCard.getCardStats();
-//        for (String key : attributesMap.keySet()) {
-//            attributeNames.add(key);
-//        }
-//
-//        Random random = new Random();
-//        int randomIndex = random.nextInt(attributeNames.size());
-//
-//        return attributeNames.get(randomIndex);
-//    }
-//
-//    public String chooseBiggestAttribute() {
+//    public String chooseBiggestAttribute() {S
 //        Map<String, Float> attributesMap = topCard.getCardStats();
 //        String biggestAttribute = "";
 //
