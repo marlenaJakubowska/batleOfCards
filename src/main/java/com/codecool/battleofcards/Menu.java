@@ -18,6 +18,7 @@ public class Menu {
                 switch (selectedOption) {
                     case 1:
                         game.init();
+                        ui.clearScreen();
                         isRunning = false;
                         break;
                     case 2:

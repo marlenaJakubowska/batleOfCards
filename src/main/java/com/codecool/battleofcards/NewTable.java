@@ -98,6 +98,7 @@ public class NewTable {
     }
     
     private void pvc(){
+        ui.clearScreen();
         Player ai = getPlayerList().get(0);
         Player humanPlayer = getPlayerList().get(1);
         boolean doesAIHaveCards = ai.getHand().getIterator().hasNext();
@@ -110,6 +111,7 @@ public class NewTable {
             roundCards.add(rivalPlayer.getTopCard());
             printTable(currentPlayer, rivalPlayer, false, true);
             String attributeChoice = currentPlayer.chooseStatToCompare();
+            System.out.println("-----------------------------");
             printTable(currentPlayer, rivalPlayer, true, false);
             int compareResult = compareTopCards(attributeChoice, currentPlayer, rivalPlayer);
             printCompareResult(compareResult, currentPlayer, rivalPlayer);
@@ -135,12 +137,12 @@ public class NewTable {
     }
 
     private void printEndGame(String gameResult) {
-        ui.clearScreen();
         System.out.println(gameResult + " wins!");
     }
 
     private void printEndOfRound() {
         ui.takeStringInput("Press 666 to continue");
+        ui.clearScreen();
     }
 
     private List<Player> getPlayerList() {
@@ -188,7 +190,6 @@ public class NewTable {
     }
 
     private void printTable(Player currentPlayer, Player rivalPlayer, boolean isVisibleForAll, boolean isVisibleForOne) {
-        ui.clearScreen();
         Player ai = playerList.get(0);
         if (!isVisibleForAll && isVisibleForOne) {
             if(currentPlayer == ai) {

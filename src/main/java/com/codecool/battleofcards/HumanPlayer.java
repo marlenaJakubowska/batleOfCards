@@ -26,7 +26,7 @@ public class HumanPlayer extends Player{
         int input = 0;
         while(isRunning) {
             printStatsToChoose(attributeChoice);
-            input = ui.takeIntegerInput("Choose attribute 1 - 4");
+            input = ui.takeIntegerInput("Choose attribute 1 - 4: ");
             if (input > 0 && input < 5) {
                 isRunning = false;
             }

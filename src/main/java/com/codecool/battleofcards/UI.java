@@ -15,29 +15,33 @@ public class UI {
         return scanner.nextInt();
     }
 
-    public void clearScreen(){
-        System.out.print("\033[H\033[2J");
-        System.out.flush();
-
+    public void clearScreen() {
+        System.out.println("\n".repeat(30));
     }
 
     public String getXSign() {
         String xSign =
-                "XX      XX\n" +
-                " XX    XX \n" +
-                "  XX  XX  \n" +
-                "   XXXX   \n" +
-                "  XX  XX  \n" +
-                " XX    XX \n" +
-                "XX      XX";
+                "~~~~~~~~~~~~~~~~~~\n" +
+                "|                |\n" +
+                "|   XX      XX   |\n" +
+                "|    XX    XX    |\n" +
+                "|     XX  XX     |\n" +
+                "|      XXXX      |\n" +
+                "|     XX  XX     |\n" +
+                "|    XX    XX    |\n" +
+                "|   XX      XX   |\n" +
+                "~~~~~~~~~~~~~~~~~~";
         return xSign;
     }
 
     public void printMainMenu() {
-        System.out.println("Welcome to Battle of Cards Game. Please choose an option:\n"
-                         + "1. New Game\n"
-                         + "2. About\n"
-                         + "0. Exit");
+        System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n"
+                         + "|Welcome to Battle of Cards Game|\n"
+                         + "|- - - - - - - - - - - - - - - -|\n"
+                         + "|1. New Game                    |\n"
+                         + "|2. About                       |\n"
+                         + "|0. Exit                        |\n"
+                         + "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
     }
 
     public void printAbout(){
@@ -52,10 +56,13 @@ public class UI {
         "the winner is the player with most cards.");
     }
     public void printSelectionMenu(){
-        System.out.println("Which game mode you want to play ? :\n"
-                            +"1. Player vs AI \n"
-                            +"2. HotSeat --> Work in Progress\n"
-                            +"3. Custom computer fight --> Work in Progress");
+        System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n"
+                         + "|Which game mode you want to play ?            |\n"
+                         + "|- - - - - - - - - - - - - - - - - - - - - - - |\n"
+                         + "|1. Player vs AI                               |\n"
+                         + "|2. HotSeat --> Work in Progress               |\n"
+                         + "|3. Custom computer fight --> Work in Progress |\n"
+                         + "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
     }
     //for later use
 //    public void printSelectNumberOfPlayers(){
