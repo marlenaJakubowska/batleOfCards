@@ -15,6 +15,24 @@ public class UI {
         return scanner.nextInt();
     }
 
+    public void clearScreen(){
+        System.out.print("\033[H\033[2J");
+        System.out.flush();
+
+    }
+
+    public String getXSign() {
+        String xSign =
+                "XX      XX\n" +
+                " XX    XX \n" +
+                "  XX  XX  \n" +
+                "   XXXX   \n" +
+                "  XX  XX  \n" +
+                " XX    XX \n" +
+                "XX      XX";
+        return xSign;
+    }
+
     public void printMainMenu() {
         System.out.println("Welcome to Battle of Cards Game. Please choose an option:\n"
                          + "1. New Game\n"
@@ -36,11 +54,12 @@ public class UI {
     public void printSelectionMenu(){
         System.out.println("Which game mode you want to play ? :\n"
                             +"1. Player vs AI \n"
-                            +"2. HotSeat\n"
-                            +"3. Custom computer fight");
+                            +"2. HotSeat --> Work in Progress\n"
+                            +"3. Custom computer fight --> Work in Progress");
     }
-    public void printSelectNumberOfPlayers(){
-        System.out.println("How many Players/AI you wanna play with?");
-    }
+    //for later use
+//    public void printSelectNumberOfPlayers(){
+//        System.out.println("How many Players/AI you wanna play with?");
+//    }
 }
 

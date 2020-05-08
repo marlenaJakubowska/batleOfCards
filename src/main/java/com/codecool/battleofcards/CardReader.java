@@ -9,14 +9,21 @@ import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import java.io.File;
 
-public class CardReader {
+public class CardReader {  // done
 
     private Document document;
-    private final Deck deck;
+    private Deck deck;
 
     public CardReader() {
+//        this.deck = new Deck();
+//        readCards();
+        runCardReader();
+    }
+
+    private void runCardReader() {
         this.deck = new Deck();
         readCards();
+
     }
 
     public void readXmlDoc(String path) {
