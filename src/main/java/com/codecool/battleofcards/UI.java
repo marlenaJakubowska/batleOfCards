@@ -15,10 +15,8 @@ public class UI {
         return scanner.nextInt();
     }
 
-    public void clearScreen(){
-        System.out.print("\033[H\033[2J");
-        System.out.flush();
-
+    public void clearScreen() {
+        System.out.println("\n".repeat(30));
     }
 
     public String getXSign() {
@@ -34,7 +32,7 @@ public class UI {
     }
 
     public void printMainMenu() {
-        System.out.println("Welcome to Battle of Cards Game. Please choose an option:\n"
+        System.out.println("Welcome to Battle of Cards Game\n"
                          + "1. New Game\n"
                          + "2. About\n"
                          + "0. Exit");
@@ -52,7 +50,7 @@ public class UI {
         "the winner is the player with most cards.");
     }
     public void printSelectionMenu(){
-        System.out.println("Which game mode you want to play ? :\n"
+        System.out.println("Which game mode you want to play ?\n"
                             +"1. Player vs AI \n"
                             +"2. HotSeat --> Work in Progress\n"
                             +"3. Custom computer fight --> Work in Progress");
